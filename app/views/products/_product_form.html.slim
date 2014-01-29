@@ -1,0 +1,8 @@
+= simple_form_for(product) do |f|
+  = f.input :name
+  = f.input :description, rows: 6
+  = f.input :price
+  = f.button :submit, class: "action btn btn-primary"
+
+  / = f.label :image_url
+  / = f.text_field :image_url

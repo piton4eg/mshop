@@ -1,0 +1,14 @@
+h1 = t('views.cart.list')
+
+table
+  tr
+    th
+    th
+    th
+  - @carts.each do |cart|
+    tr
+      td = link_to t('views.cart.show_button'), cart
+      td = link_to t('views.cart.edit_button'), edit_cart_path(cart)
+      td = link_to t('views.cart.delete_button'), cart, data: { confirm: t('confirm.are_you_sure') }, :method => :delete
+br
+= link_to t('views.cart.new_button'), new_cart_path

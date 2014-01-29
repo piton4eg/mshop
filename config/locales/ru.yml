@@ -1,0 +1,66 @@
+ru:
+  title:
+    cart: 'Корзина'
+  confirm:
+    are_you_sure: 'Вы уверены?'
+  views:
+    app_name: 'Интернет-каталог'
+    app_phone: 'Телефон: 111-111'
+    about_label: 'О каталоге'
+    contact_label: 'Контакты'
+    send_error: 'Сообщить об ошибке'
+    back_button: 'Назад'
+    add_button: 'Добавить в корзину'
+    product:
+      list: 'Продукты'
+      new_button: 'Добавить'
+      new_label: 'Добавление продукта'
+      show_button: 'Подробнее'
+      edit_button: 'Редактировать'
+      edit_label: 'Редактирование продукта'
+      delete_button: 'Удалить'
+      created: 'Продукт создан'
+      updated: 'Изменения сохранены'
+      deleted: 'Продукт удален'
+    cart:
+      empty: 'Корзина пуста'
+      no_present: 'Корзина не существует'
+      created: 'Корзина успешно создана'
+      updated: 'Корзина успешно обновлена'
+      list: 'Список корзин'
+      new_button: 'Добавить'
+      new_label: 'Добавление корзины'
+      show_button: 'Подробнее'
+      edit_button: 'Редактировать'
+      edit_label: 'Редактирование корзины'
+      delete_button: 'Удалить'
+      title: 'Ваша корзина'
+      summa: 'Итого'
+      clear_button: 'Очистить корзину'
+      save_button: 'Сохранить'
+    line_item:
+      count_label: 'шт.'
+      save_button: 'Сохранить'
+      list: 'Список позиций'
+      new_button: 'Добавить'
+      new_label: 'Добавление позиции'
+      show_button: 'Подробнее'
+      edit_button: 'Редактировать'
+      edit_label: 'Редактирование позиции'
+      delete_button: 'Удалить'
+      updated: 'Позиция успешно обновлена'
+      created: 'Позиция успешно добавлена'
+  activerecord:
+    models:
+      product: 'продукт'
+      cart: 'корзина'
+    attributes:
+      product:
+        name: 'Наименование'
+        description: 'Описание'
+        price: 'Стоимость'
+  errors:
+    cart:
+      no_present: "Попытка доступа к несуществующей корзине %{cart_id}"
+    product:
+      line_items_present: 'существуют товарные позиции'

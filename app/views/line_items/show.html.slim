@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong = t('activerecord.models.product')
+  = @line_item.product_id
+p
+  strong = t('activerecord.models.cart')
+  = @line_item.cart_id
+
+= link_to t('views.line_item.edit_button'), edit_line_item_path(@line_item)
+'|
+= link_to t('views.back_button'), line_items_path

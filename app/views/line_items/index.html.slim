@@ -1,0 +1,21 @@
+h1 = t('views.line_item.list')
+
+table
+  tr
+    th = t('activerecord.models.product')
+    th = t('activerecord.models.cart')
+    th
+    th
+    th
+
+  - @line_items.each do |line_item|
+    tr
+      td = line_item.product_id
+      td = line_item.cart_id
+      td = link_to t('views.line_item.show_button'), line_item
+      td = link_to t('views.line_item.edit_button'), edit_line_item_path(line_item)
+      td = link_to t('views.line_item.delete_button'), line_item, data: { confirm: t('confirm.are_you_sure') }, :method => :delete
+
+br
+
+= link_to 'New Line item', new_line_item_path

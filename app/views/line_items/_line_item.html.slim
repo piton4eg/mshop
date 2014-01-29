@@ -1,0 +1,6 @@
+= current_item_if(line_item == @current_item) do
+  td = "#{line_item.quantity} #{t('views.line_item.count_label')}"
+  td = line_item.product.name
+  td = number_to_currency(line_item.total_price)
+  td = link_to "-1", line_item_path(line_item), method: :delete, remote: true
+end

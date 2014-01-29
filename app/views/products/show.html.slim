@@ -1,0 +1,14 @@
+- provide(:title, @product.name)
+.product
+  .name
+    h1 = t('activerecord.attributes.product.name')
+    = @product.name
+  .description
+    h2 = t('activerecord.attributes.product.description')
+    = @product.description
+  .price
+    h2 = t('activerecord.attributes.product.price')
+    = number_to_currency(@product.price)
+  br
+  = link_to(t('views.product.edit_button'), edit_product_path(@product), class: "btn")
+  = link_to(t('views.product.delete_button'), @product, method: :delete, confirm: t('confirm.are_you_sure'), class: "btn")

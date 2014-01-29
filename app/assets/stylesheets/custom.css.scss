@@ -1,0 +1,65 @@
+// Place all the styles related to the Products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap";
+// @import "bootstrap-responsive";
+
+body {
+  padding-top: 60px;
+}
+
+html {
+  overflow-y: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  letter-spacing: -2px;
+}
+
+h2 {
+  font-size: 1.5em;
+  letter-spacing: -1px;
+  font-weight: normal;
+  color: $grayLight;
+}
+
+#logo {
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 20px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: $grayLight;
+  a {
+    color: $gray;
+    &:hover {
+      color: $grayDarker;
+    }
+  }
+  .left-text {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
+
+#error_text {
+  color: red;
+}

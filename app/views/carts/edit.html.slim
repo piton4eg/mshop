@@ -1,0 +1,8 @@
+h1 = t('views.cart.edit_label')
+
+= render 'cart_form', cart: @cart
+
+= link_to t('views.cart.show_button'), @cart
+'|
+= link_to t('views.back_button'), carts_path
+
