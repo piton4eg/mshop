@@ -1,6 +1,11 @@
 ru:
   title:
     cart: 'Корзина'
+    product: 'Продукт'
+    name: 'Имя'
+    address: 'Адрес'
+    email: 'Email'
+    payment_type: 'Способ оплаты'
   confirm:
     are_you_sure: 'Вы уверены?'
   views:
@@ -50,16 +55,36 @@ ru:
       delete_button: 'Удалить'
       updated: 'Позиция успешно обновлена'
       created: 'Позиция успешно добавлена'
+    order:
+      list: 'Список заказов'
+      created: 'Спасибо за Ваш заказ.'
+      updated: 'Заказ успешно обновлен.'
+      new_button: 'Оформить заказ'
+      new_label: 'Заполните детали'
+      show_button: 'Показать'
+      edit_button: 'Редактировать'
+      edit_label: 'Редактирование заказа'
+      delete_button: 'Удалить'
   activerecord:
     models:
       product: 'продукт'
       cart: 'корзина'
+      order: 'заказ'
     attributes:
       product:
         name: 'Наименование'
         description: 'Описание'
         price: 'Стоимость'
+      order:
+        name: 'Имя'
+        address: 'Адрес'
+        email: 'Email'
+        payment_type: 'Способ оплаты'
+      line_item:
+        product_id: 'Продукт'
+        cart_id: 'Корзина'
   errors:
+    form_save: 'При сохранении формы произошли ошибки:'
     cart:
       no_present: "Попытка доступа к несуществующей корзине %{cart_id}"
     product:

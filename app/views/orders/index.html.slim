@@ -1,0 +1,25 @@
+h1 = t('views.order.list')
+
+table
+  tr
+    th = t('title.name')
+    th = t('title.address')
+    th = t('title.email')
+    th = t('title.payment_type')
+    th
+    th
+    th
+
+  - @orders.each do |order|
+    tr
+      td = order.name
+      td = order.address
+      td = order.email
+      td = order.pay_type
+      td = link_to t('views.order.show_button'), order
+      td = link_to t('views.order.edit_button'), edit_order_path(order)
+      td = link_to t('views.order.delete_button'), order, data: { confirm: t('confirm.are_you_sure') }, :method => :delete
+
+br
+= will_paginate @orders
+= link_to t('views.order.new_button'), new_order_path

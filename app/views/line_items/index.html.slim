@@ -2,8 +2,8 @@ h1 = t('views.line_item.list')
 
 table
   tr
-    th = t('activerecord.models.product')
-    th = t('activerecord.models.cart')
+    th = t('title.product')
+    th = t('title.cart')
     th
     th
     th
@@ -18,4 +18,4 @@ table
 
 br
 
-= link_to 'New Line item', new_line_item_path
+= link_to t('views.line_item.new_button'), new_line_item_path

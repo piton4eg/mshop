@@ -1,0 +1,8 @@
+h1 = t('views.order.edit_label')
+
+== render 'order_form'
+
+= link_to t('views.order.show_button'), @order
+'|
+= link_to t('views.back_button'), orders_path
+

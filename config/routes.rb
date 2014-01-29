@@ -6,6 +6,7 @@ Mshop::Application.routes.draw do
   resources :products
   resources :line_items
   resources :carts
+  resources :orders
 
   root to: 'store#index'
 end

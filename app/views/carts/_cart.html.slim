@@ -5,5 +5,5 @@ table
     td colspan="2" = t('views.cart.summa')
     td class="total_cell" = number_to_currency(cart.total_price)
 
-/= button_to "Оформить заказ", new_order_path, method: :get
+= button_to t('views.order.new_button'), new_order_path, method: :get
 = button_to t('views.cart.clear_button'), cart, method: :delete, data: { confirm: t('confirm.are_you_sure') }, remote: true
