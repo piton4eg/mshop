@@ -13,8 +13,9 @@ gem 'slim-rails', '~> 2.0.4'
 gem 'pg', '0.15.1'
 gem 'bootstrap-sass', '2.3.1.0'
 gem 'rails-i18n'
-gem 'will_paginate', '~> 3.0'
+gem 'will_paginate', '~> 3.0.5'
 gem 'simple_form'
+gem 'bcrypt-ruby', '~> 3.1.2'
 
 group :development, :test do
   gem 'rspec-rails', '2.13.1'

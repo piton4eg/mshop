@@ -1,0 +1,8 @@
+p#notice = notice
+
+div
+  strong = t('activerecord.attributes.user.name')
+  p = @user.name
+
+= link_to t('views.user.edit_button'), edit_user_path(@user)
+= link_to t('views.back_button'), users_path

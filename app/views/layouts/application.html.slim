@@ -22,11 +22,11 @@ html
               = render @cart
             end
 
-        /   - if session[:user_id]
-        /     ul
-        /       li = link_to 'Заказы', orders_path
-        /       li = link_to 'Продукты', products_path
-        /       li = link_to 'Пользователи', users_path
-        /     = button_to 'Выйти', logout_path, method: :delete
+          - if session[:user_id]
+            ul
+              li = link_to t('views.order.list'), orders_path
+              li = link_to t('views.product.list'), products_path
+              li = link_to t('views.user.list'), users_path
+            = button_to t('title.logout'), logout_path, method: :delete
 
       = render 'layouts/footer'

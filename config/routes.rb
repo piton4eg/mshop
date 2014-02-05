@@ -1,12 +1,20 @@
 Mshop::Application.routes.draw do
+  get 'admin' => 'admin#index'
 
-  match '/contact', to: 'static_pages#contact', via: 'get'
-  match '/about', to: 'static_pages#about', via: 'get'
+  controller :sessions do
+    get     'login' => :new
+    post    'login' => :create
+    delete  'logout' => :destroy
+  end
 
   resources :products
   resources :line_items
   resources :carts
   resources :orders
+  resources :users
+
+  get '/contact' => 'static_pages#contact'
+  get '/about' => 'static_pages#about'
 
   root to: 'store#index'
 end

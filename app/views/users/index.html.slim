@@ -1,0 +1,19 @@
+h1 = t('views.user.list')
+
+table
+  tr
+    th = t('activerecord.attributes.user.name')
+    th
+    th
+    th
+
+  - @users.each do |user|
+    tr
+      td = user.name
+      td = link_to t('views.user.show_button'), user
+      td = link_to t('views.user.edit_button'), edit_user_path(user)
+      td = link_to t('views.user.delete_button'), user, data: { confirm: t('confirm.are_you_sure') }, :method => :delete
+
+br
+
+= link_to t('views.user.new_button'), new_user_path

@@ -1,9 +1,9 @@
 class OrdersController < ApplicationController
-  #skip_before_filter :authorize, only: [:new, :create]
+  skip_before_filter :authorize, only: [:new, :create]
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
   def index
-    @orders = Order.paginate page: params[:page], order: 'created_at desc', per_page: 10
+    @orders = Order.page(params[:page]).order('created_at desc').per_page(10)
 
     respond_to do |format|
       format.html

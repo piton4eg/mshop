@@ -1,0 +1,5 @@
+h1 = t('title.hello')
+
+= "Сейчас #{Time.now}"
+br
+= "У нас имеется #{@total_orders.size} заказов" if @total_orders.size > 0

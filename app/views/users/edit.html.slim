@@ -1,0 +1,8 @@
+h1 = t('views.user.edit_label')
+
+== render 'user_form', user: @user
+
+= link_to t('views.user.show_button'), @user
+'|
+= link_to t('views.back_button'), users_path
+

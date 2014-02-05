@@ -1,20 +1,7 @@
-= form_for @order do |f|
-  - if @order.errors.any?
-    #error_explanation
-      h2 = t('errors.form_save')
-      ul
-        - @order.errors.full_messages.each do |msg|
-          li = msg
-  .field
-    = f.label :name
-    = f.text_field :name, size: 40
-  .field
-    = f.label :address
-    = f.text_area :address, rows: 3, cols: 40
-  .field
-    = f.label :email
-    = f.email_field :email, size: 40
-  /.field
+= simple_form_for(order) do |f|
+  = f.input :name
+  = f.input :address, rows: 3
+  = f.input :email
   /  = f.label :pay_type
   /  = f.select :pay_type, Order::PAYMENT_TYPES, prompt: 'Выберите тип оплаты'
-  .actions = f.submit
+  = f.button :submit, class: "action btn btn-primary"
