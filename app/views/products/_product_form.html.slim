@@ -1,8 +1,15 @@
-= simple_form_for(product) do |f|
+= simple_form_for(product, html: { multipart: true }) do |f|
   = f.input :name
   = f.input :description, rows: 6
   = f.input :price
-  = f.button :submit, class: "action btn btn-primary"
+  
+  = f.hidden_field :image_cache
+  = image_tag(product.image_url(:mini)) if product.image?
+  = f.file_field :image
+  ' or
+  = f.input :remote_image_url
 
-  / = f.label :image_url
-  / = f.text_field :image_url
+  = f.check_box :remove_image
+  = f.label :remove_image
+  
+  = f.button :submit, class: "action btn btn-primary"

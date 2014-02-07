@@ -37,6 +37,7 @@ class UsersController < ApplicationController
   def destroy
     begin
       @user.destroy
+      session[:user_id] = nil
       flash[:notice] = t('views.user.deleted', user: @user.name)
     rescue Exception => e
       flash[:notice] = e.message

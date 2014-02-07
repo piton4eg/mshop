@@ -1,6 +1,6 @@
 tr
-  / td
-  /   .foto = image_tag(product.image_url)
+  td
+    .foto = image_tag(product.image_url(:thumb)).to_s
   td
     dl
       dt = product.name
