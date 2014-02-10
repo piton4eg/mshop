@@ -8,6 +8,8 @@ html
     /[if lt IE 9] script src="http://html5shim.googlecode.com/svn/trunk/html5.js"
   body
     = render 'layouts/header'
+
+    = yield(:additional_html)
     .container
       .row
         .span9

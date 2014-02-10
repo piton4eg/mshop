@@ -1,7 +1,47 @@
-h1 = t('views.product.list')
+= content_for :additional_html do
 
-table class="table table-hover"
-  tbody
-    = render @products
+  .slider-container
+    .slider-bg
+    .container
+      .row
+        .span12
+          = render partial: '/store/slider'
 
-= link_to t('views.product.new_button'), new_product_path, class: "btn btn-primary"
+  .separator
+  .container
+    .row
+      .span12
+        h2 Популярные товары
+    .row
+      .span3
+        .popular-item
+          a href="#"
+            img src="/assets/slider/cream1.png" alt =""
+            span Посмотреть
+      .span3
+        .popular-item
+          a href="#"
+            img src="/assets/slider/cream1.png" alt =""
+            span Посмотреть
+      .span3
+        .popular-item
+          a href="#"
+            img src="/assets/slider/cream1.png" alt =""
+            span Посмотреть
+      .span3
+        .popular-item
+          a href="#"
+            img src="/assets/slider/cream1.png" alt =""
+            span Посмотреть
+  .container
+    .row
+      .span9
+        h1 = t('views.product.list')
+      .span3
+        table class="table table-hover"
+          tbody
+            = render @products
+
+        = link_to t('views.product.new_button'), new_product_path, class: "btn btn-primary"
+
+

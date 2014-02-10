@@ -1,0 +1,64 @@
+#slides {
+  display: none;
+  position: relative;
+  overflow: visible !important;
+  margin-top: 80px;
+}
+
+.item {
+  img {
+    width: 500px;
+    height: 434px;
+  }
+}
+//Пейджинатор
+.slidesjs-pagination {
+  list-style: none;
+  text-align: center;
+  li {
+    display: inline-block;
+    a {
+      display: block;
+      width: 10px;
+      height: 10px;
+      content: "";
+      background-color: pink;
+      float: left;
+      overflow: hidden;
+      text-indent: -9999px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -o-border-radius: 10px;
+      border-radius: 10px;
+      border: 1px solid #db7093;
+      margin-right: 5px;
+
+      &.active {
+        background-color: #db7093;
+      }
+    }
+  }
+}
+//Стрелочки
+a.slidesjs-next,
+a.slidesjs-previous {
+  position: absolute;
+  top: 20%;
+  left: -80px;
+  z-index: 100;
+  background: image-url('/assets/arrows/left.png') repeat 0 0;
+  display: block;
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+a.slidesjs-next {
+  background-image: image-url('/assets/arrows/right.png');
+  left: auto;
+  right: -80px;
+}
+a.slidesjs-play,
+a.slidesjs-stop {
+  display: none;
+}
