@@ -24,7 +24,7 @@ html
               = render @cart
             end
 
-          - if session[:user_id]
+          - if logged_in?
             ul
               li = link_to t('views.order.list'), orders_path
               li = link_to t('views.product.list'), products_path

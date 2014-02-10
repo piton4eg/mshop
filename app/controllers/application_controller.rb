@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
 
   def authorize
     unless User.where(id: session[:user_id]).first
-      redirect_to login_url, notice: t('errors.need_auth')
+      redirect_to '/404'
     end
   end
 

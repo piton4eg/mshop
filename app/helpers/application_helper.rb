@@ -21,4 +21,8 @@ module ApplicationHelper
      end
      content_tag("tr", attributes, &block)
   end
+
+  def logged_in?
+    session[:user_id].present?
+  end
 end
