@@ -88,11 +88,13 @@ ru:
       cart: 'корзина'
       order: 'заказ'
       user: 'пользователь'
+      image: 'изображение'
     attributes:
       product:
         name: 'Наименование'
         description: 'Описание'
         price: 'Стоимость'
+        image: 'Основное изображение'
       order:
         name: 'Имя'
         address: 'Адрес'

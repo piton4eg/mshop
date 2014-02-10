@@ -21,6 +21,7 @@ gem 'rmagick'
 gem 'fog'
 gem 'unf', '~> 0.1.3'
 gem 'figaro'
+gem 'nested_form'
 
 group :development, :test do
   gem 'rspec-rails', '2.13.1'

@@ -1,8 +1,10 @@
-= simple_form_for(product, html: { multipart: true }) do |f|
+= simple_nested_form_for(product, html: { multipart: true }) do |f|
   = f.input :name
   = f.input :description, rows: 6
   = f.input :price
   
+  / avatar
+  = f.label :image
   = f.hidden_field :image_cache
   = image_tag(product.image_url(:mini)) if product.image?
   = f.file_field :image
@@ -11,5 +13,19 @@
 
   = f.check_box :remove_image
   = f.label :remove_image
+
+  / images for product
+  = f.simple_fields_for :images do |i|
+    = i.hidden_field :image_cache
+    = image_tag(i.object.image_url(:mini)) if i.object.image?
+    = i.file_field :image
+    ' or
+    = i.input :remote_image_url
+
+    = i.check_box :remove_image
+    = i.label :remove_image
+
+    = i.link_to_remove " &times;".html_safe
+  = f.link_to_add "добавить", :images
   
   = f.button :submit, class: "action btn btn-primary"

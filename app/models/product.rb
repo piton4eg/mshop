@@ -1,6 +1,10 @@
 class Product < ActiveRecord::Base
   has_many :line_items
   has_many :orders, through: :line_items
+  has_many :images
+
+  accepts_nested_attributes_for :images, allow_destroy: true
+  #attr_accessible :images_attributes
 
   before_destroy :ensure_not_referenced_by_any_line_item
 
