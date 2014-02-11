@@ -36,10 +36,23 @@
   .container
     .row
       .span12
-        h1 = t('views.product.list')
+        h1 = t('views.product.popular')
     .row
-      - @products.each do |product|
+      - @popular_products.each do |product|
         .span3
           .popular-item
             = link_to(image_tag(product.image_url(:mini).to_s) + content_tag(:span, 'Посмотреть'), product)
       = link_to t('views.product.list'), products_path
+  .container
+    .row
+      .span12
+        h1 = t('views.product.latest')
+    .row
+      - @last_products.each do |product|
+        .span3
+          .popular-item
+            = link_to(image_tag(product.image_url(:mini).to_s) + content_tag(:span, 'Посмотреть'), product)
+      = link_to t('views.product.list'), products_path
+
+  .posts
+     = render @posts

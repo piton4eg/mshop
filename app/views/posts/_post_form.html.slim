@@ -1,0 +1,5 @@
+= simple_form_for(post, html: { multipart: true }) do |f|
+  = f.input :title
+  = f.input :value, rows: 6
+
+  = f.button :submit, class: "action btn btn-primary"

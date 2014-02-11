@@ -30,6 +30,8 @@ ru:
       created: 'Продукт создан'
       updated: 'Изменения сохранены'
       deleted: 'Продукт удален'
+      latest: 'Последние поступления'
+      popular: 'Популярные продукты'
     cart:
       empty: 'Корзина пуста'
       no_present: 'Корзина не существует'
@@ -82,6 +84,17 @@ ru:
       edit_button: 'Редактировать'
       edit_label: 'Редактирование пользователя'
       delete_button: 'Удалить'
+    post:
+      created: 'Новость успешно создана'
+      updated: 'Новость успешно обновлена'
+      deleted: 'Новость успешно удалена'
+      list: 'Список новостей'
+      new_button: 'Создать новость'
+      new_label: 'Создание новости'
+      show_button: 'Показать'
+      edit_button: 'Редактировать'
+      edit_label: 'Редактирование новости'
+      delete_button: 'Удалить'
   activerecord:
     models:
       product: 'продукт'
@@ -89,12 +102,16 @@ ru:
       order: 'заказ'
       user: 'пользователь'
       image: 'изображение'
+      post: 'новость'
     attributes:
       product:
         name: 'Наименование'
         description: 'Описание'
         price: 'Стоимость'
         image: 'Основное изображение'
+      post:
+        title: 'Заголовок'
+        value: 'Текст'
       order:
         name: 'Имя'
         address: 'Адрес'

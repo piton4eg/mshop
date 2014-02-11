@@ -5,7 +5,7 @@
     = @product.name
   .description
     h2 = t('activerecord.attributes.product.description')
-    = @product.description
+    = @product.description.html_safe
   .price
     h2 = t('activerecord.attributes.product.price')
     = number_to_currency(@product.price)

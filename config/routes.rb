@@ -12,6 +12,7 @@ Mshop::Application.routes.draw do
   resources :carts
   resources :orders
   resources :users
+  resources :posts
 
   get '/contact' => 'static_pages#contact'
   get '/about' => 'static_pages#about'

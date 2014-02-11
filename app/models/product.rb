@@ -13,6 +13,9 @@ class Product < ActiveRecord::Base
 
   mount_uploader :image, ImageUploader
 
+  scope :popular, -> { where(popular: true).order("updated_at DESC") }
+  scope :latest, -> { order("created_at DESC") }
+
   private
 
   def ensure_not_referenced_by_any_line_item

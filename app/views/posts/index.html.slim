@@ -1,0 +1,8 @@
+h1 = t('views.post.list')
+
+table class="table table-hover"
+  tbody
+    = render @posts
+
+- if logged_in?
+  = link_to t('views.post.new_button'), new_post_path, class: "btn btn-primary"

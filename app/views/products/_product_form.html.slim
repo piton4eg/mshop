@@ -1,6 +1,6 @@
 = simple_nested_form_for(product, html: { multipart: true }) do |f|
   = f.input :name
-  = f.input :description, rows: 6
+  = f.input :description, input_html: { class: 'summernote' }
   = f.input :price
   
   / avatar

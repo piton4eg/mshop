@@ -16,4 +16,6 @@
 //= require turbolinks
 //= require bootstrap
 //= require jquery_nested_form
+//= require summernote
+//= require lang/summernote-ru-RU
 //= require_tree .

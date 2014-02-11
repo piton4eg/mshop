@@ -1,0 +1,12 @@
+- provide(:title, @post.title)
+.product
+  .name
+    h1 = t('activerecord.attributes.post.title')
+    = @post.title
+  .description
+    h2 = t('activerecord.attributes.post.value')
+    = @post.value
+  br
+  - if logged_in?
+    = link_to(t('views.post.edit_button'), edit_post_path(@post), class: "btn")
+    = link_to(t('views.post.delete_button'), @post, method: :delete, confirm: t('confirm.are_you_sure'), class: "btn")

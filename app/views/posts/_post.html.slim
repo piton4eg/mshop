@@ -1,0 +1,10 @@
+tr
+  td
+    dl
+      dt = post.title
+      dd = truncate(strip_tags(post.value), length: 80)
+  td
+    = link_to(t('views.post.show_button'), post, class: "btn")
+    - if logged_in?
+      = link_to(t('views.post.edit_button'), edit_post_path(post), class: "btn")
+      = link_to(t('views.post.delete_button'), post, method: :delete, data: { confirm: t('confirm.are_you_sure') }, class: "btn")
