@@ -7,8 +7,12 @@
 
 .item {
   img {
+    display: inline-block;
     width: 500px;
     height: 434px;
+  }
+  > div {
+    display: inline-block;
   }
 }
 //Пейджинатор
@@ -22,7 +26,7 @@
       width: 10px;
       height: 10px;
       content: "";
-      background-color: pink;
+      background-color: #F76B18;
       float: left;
       overflow: hidden;
       text-indent: -9999px;
@@ -30,11 +34,11 @@
       -moz-border-radius: 10px;
       -o-border-radius: 10px;
       border-radius: 10px;
-      border: 1px solid #db7093;
+      border: 1px solid #EB4A22;
       margin-right: 5px;
 
       &.active {
-        background-color: #db7093;
+        background-color: #EB4A22;
       }
     }
   }
@@ -46,19 +50,27 @@ a.slidesjs-previous {
   top: 20%;
   left: -80px;
   z-index: 100;
-  background: image-url('/assets/arrows/left.png') repeat 0 0;
+  background: image-url('/assets/arrows/arrow.png') repeat 0 0;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+  opacity: 0.6;
   display: block;
   width: 48px;
   height: 48px;
   overflow: hidden;
   text-indent: -9999px;
+  &:hover {
+    opacity: 1;
+  }
 }
 a.slidesjs-next {
-  background-image: image-url('/assets/arrows/right.png');
+  background-image: image-url('/assets/arrows/arrow1.png');
   left: auto;
   right: -80px;
 }
 a.slidesjs-play,
 a.slidesjs-stop {
-  display: none;
+  display: none !important;
 }

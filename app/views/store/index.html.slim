@@ -11,32 +11,34 @@
   .container
     .row
       .span12
-        h2 Популярные товары
+        h2 = t('views.product.popular')
     .row
       .span3
         .popular-item
           a href="#"
-            img src="/assets/slider/cream1.png" alt =""
+            img src="/assets/slider/car2.png" alt =""
             span Посмотреть
       .span3
         .popular-item
           a href="#"
-            img src="/assets/slider/cream1.png" alt =""
+            img src="/assets/slider/car1.png" alt =""
             span Посмотреть
       .span3
         .popular-item
           a href="#"
-            img src="/assets/slider/cream1.png" alt =""
+            img src="/assets/slider/color2.png" alt =""
             span Посмотреть
       .span3
         .popular-item
           a href="#"
-            img src="/assets/slider/cream1.png" alt =""
+            img src="/assets/slider/car5.jpg" alt =""
             span Посмотреть
+
+
   .container
     .row
       .span12
-        h1 = t('views.product.popular')
+        h2 = t('views.product.popular')
     .row
       - @popular_products.each do |product|
         .span3
@@ -46,7 +48,7 @@
   .container
     .row
       .span12
-        h1 = t('views.product.latest')
+        h2 = t('views.product.latest')
     .row
       - @last_products.each do |product|
         .span3
