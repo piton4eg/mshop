@@ -6,7 +6,10 @@
   .description
     h2 = t('activerecord.attributes.post.value')
     = @post.value
+  .images
+    - @post.images.each do |image|
+      = image_tag image.image_url.to_s
   br
   - if logged_in?
     = link_to(t('views.post.edit_button'), edit_post_path(@post), class: "btn")
-    = link_to(t('views.post.delete_button'), @post, method: :delete, confirm: t('confirm.are_you_sure'), class: "btn")
+    = link_to(t('views.post.delete_button'), @post, method: :delete, data: { confirm: t('confirm.are_you_sure') }, class: "btn")

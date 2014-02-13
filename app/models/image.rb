@@ -1,5 +1,5 @@
 class Image < ActiveRecord::Base
-  belongs_to :product
+  belongs_to :owner, polymorphic: true
 
   mount_uploader :image, ImageUploader
 end

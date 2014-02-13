@@ -7,6 +7,6 @@ class StoreController < ApplicationController
     @popular_products = Product.popular.limit(4)
     @last_products = Product.latest.limit(4)
 
-    @posts = Post.latest.limit(3)
+    @latest_posts = Post.latest.limit(3)
   end
 end

@@ -1,9 +1,8 @@
 class Product < ActiveRecord::Base
+  include Images
+
   has_many :line_items
   has_many :orders, through: :line_items
-  has_many :images
-
-  accepts_nested_attributes_for :images, allow_destroy: true
 
   before_destroy :ensure_not_referenced_by_any_line_item
 
@@ -11,6 +10,7 @@ class Product < ActiveRecord::Base
   validates :name, length: { minimum: 4 }, uniqueness: { case_sensitive: false }
   validates :price, numericality: { greater_than_or_equal_to: 0.01 }
 
+  # avatar
   mount_uploader :image, ImageUploader
 
   scope :popular, -> { where(popular: true).order("updated_at DESC") }
