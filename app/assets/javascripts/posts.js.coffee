@@ -1,11 +1,10 @@
 $ ->
-  # to set summernote object
-  # You should change '#post_content' to your textarea input id
-  summer_note = $('#product_description')
+  # set summernote object
+  summer_note = $('#product_description, #post_value')
 
-  # to call summernote editor
+  # call summernote editor
   summer_note.summernote
-  # to set options
+  # set options
     height:300
     lang:'ru-RU'
     toolbar: [
@@ -21,11 +20,10 @@ $ ->
       ["help", ["help"]]
       ]
 
-  # to set code for summernote
+  # set code for summernote
   summer_note.code summer_note.val()
 
-  # to get code for summernote
+  # get code for summernote
   summer_note.closest('form').submit ->
-    # alert $('#post_content').code()
     summer_note.val summer_note.code()
     true

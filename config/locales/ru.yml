@@ -109,6 +109,8 @@ ru:
         description: 'Описание'
         price: 'Стоимость'
         image: 'Основное изображение'
+        remote_image_url: 'Ссылка на изображение'
+        remove_image: 'Удалить изображение'
       post:
         title: 'Заголовок'
         value: 'Текст'
@@ -124,6 +126,20 @@ ru:
         name: 'Имя'
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
+  simple_form:
+    labels:
+      order:
+        line_items:
+          product: 'Продукт'
+          quantity: 'Количество'
+      product:
+        images:
+          remote_image_url: 'Ссылка на изображение'
+          remove_image: 'Удалить изображение'
+      post:
+        images:
+          remote_image_url: 'Ссылка на изображение'
+          remove_image: 'Удалить изображение'
   errors:
     form_save: 'При сохранении формы произошли ошибки:'
     need_auth: 'Необходимо авторизоваться!'

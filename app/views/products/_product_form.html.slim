@@ -8,18 +8,19 @@
   = f.hidden_field :image_cache
   = image_tag(product.image_url(:mini)) if product.image?
   = f.file_field :image
-  ' or
+  ' или
   = f.input :remote_image_url
 
   = f.check_box :remove_image
   = f.label :remove_image
+  hr
 
   / images for product
   = f.simple_fields_for :images do |i|
     = i.hidden_field :image_cache
     = image_tag(i.object.image_url(:mini)) if i.object.image?
     = i.file_field :image
-    ' or
+    ' или
     = i.input :remote_image_url
 
     = i.check_box :remove_image

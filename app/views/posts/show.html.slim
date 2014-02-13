@@ -8,7 +8,7 @@
     = @post.value
   .images
     - @post.images.each do |image|
-      = image_tag image.image_url.to_s
+      = image_tag image.image_url(:thumb).to_s
   br
   - if logged_in?
     = link_to(t('views.post.edit_button'), edit_post_path(@post), class: "btn")
