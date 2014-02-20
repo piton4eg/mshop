@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   skip_before_filter :authorize, only: [:new, :create]
-  before_action :set_order, only: [:show, :edit, :update, :destroy]
+  before_action :set_order, only: [:edit, :update, :destroy]
 
   def index
     @orders = Order.page(params[:page]).order('created_at desc').per_page(10)
@@ -11,13 +11,10 @@ class OrdersController < ApplicationController
     end
   end
 
-  def show
-  end
-
   def new
     @cart = current_cart
     if @cart.line_items.empty?
-      redirect_to store_url, notice: t('views.cart.empty')
+      redirect_to root_url, notice: t('views.cart.empty')
       return
     end
 
@@ -52,7 +49,7 @@ class OrdersController < ApplicationController
   def update
     respond_to do |format|
       if @order.update(order_params)
-        format.html { redirect_to @order, notice: t('views.order.updated') }
+        format.html { redirect_to orders_url, notice: t('views.order.updated') }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -75,6 +72,6 @@ class OrdersController < ApplicationController
   end
 
   def order_params
-    params.require(:order).permit(:name, :address, :email, :pay_type)
+    params.require(:order).permit(:name, :address, :email, :pay_type, line_items_attributes: [:id, :product, :quantity, :_destroy])
   end
 end

@@ -1,25 +1,28 @@
 h1 = t('views.order.list')
 
-table
-  tr
-    th = t('title.name')
-    th = t('title.address')
-    th = t('title.email')
-    th = t('title.payment_type')
-    th
-    th
-    th
+- @orders.each do |order|
+  = order.id
+  br
+  - order.line_items.each do |line_item|
+    = line_item.product.name
+    = line_item.product.price
+    = " * "
+    = line_item.quantity
+    = " = "
+    = line_item.total_price
+    br
 
-  - @orders.each do |order|
-    tr
-      td = order.name
-      td = order.address
-      td = order.email
-      td = order.pay_type
-      td = link_to t('views.order.show_button'), order
-      td = link_to t('views.order.edit_button'), edit_order_path(order)
-      td = link_to t('views.order.delete_button'), order, data: { confirm: t('confirm.are_you_sure') }, :method => :delete
+  = "#{t('title.name')}: #{order.name}"
+  br
+  = "#{t('title.address')}: #{order.address}"
+  br
+  = "#{t('title.email')}: #{order.email}"
+  br
+  /= "#{t('title.payment_type')}: #{order.pay_type}"
+  /= link_to t('views.order.show_button'), order
+  = link_to t('views.order.edit_button'), edit_order_path(order)
+  = link_to t('views.order.delete_button'), order, data: { confirm: t('confirm.are_you_sure') }, :method => :delete
+  hr
 
-br
 = will_paginate @orders
 = link_to t('views.order.new_button'), new_order_path

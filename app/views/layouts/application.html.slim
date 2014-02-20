@@ -29,6 +29,7 @@ html
           - if logged_in?
             ul
               li = link_to t('views.order.list'), orders_path
+              li = link_to t('views.cart.list'), carts_path
               li = link_to t('views.product.list'), products_path
               li = link_to t('views.user.list'), users_path
               li = link_to t('views.post.list'), posts_path

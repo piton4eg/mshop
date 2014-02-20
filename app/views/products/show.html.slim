@@ -17,4 +17,4 @@
   br
   - if logged_in?
     = link_to(t('views.product.edit_button'), edit_product_path(@product), class: "btn")
-    = link_to(t('views.product.delete_button'), @product, method: :delete, confirm: t('confirm.are_you_sure'), class: "btn")
+    = link_to(t('views.product.delete_button'), @product, method: :delete, data: { confirm: t('confirm.are_you_sure') }, class: "btn")

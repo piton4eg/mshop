@@ -4,6 +4,9 @@ tr
       dt = post.title
       dd = truncate(strip_tags(post.value), length: 80)
   td
+    - post.images.each do |image|
+      = image_tag image.image_url(:mini).to_s
+  td
     = link_to(t('views.post.show_button'), post, class: "btn")
     - if logged_in?
       = link_to(t('views.post.edit_button'), edit_post_path(post), class: "btn")
