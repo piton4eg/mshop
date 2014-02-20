@@ -11,7 +11,9 @@
   .container
     .row
       .span12
-        h2 = t('views.product.popular')
+        h2.pull-left = t('views.product.popular')
+        = link_to "Все продукты", products_path, class: "pull-right headright"
+        .clearfix
     .row
       .span3
         .popular-item
@@ -34,27 +36,77 @@
             img src="/assets/slider/car5.jpg" alt =""
             span Посмотреть
 
+  .separator
+
+  - if @popular_products.present?
+    .container
+      .row
+        .span12
+          h2.pull-left = t('views.product.popular')
+          = link_to t('views.product.list'), products_path, class: "pull-right headright"
+          .clearfix
+      .row
+        - @popular_products.each do |product|
+          .span3
+            .popular-item
+              = link_to(image_tag(product.image_url(:mini).to_s) + content_tag(:span, 'Посмотреть'), product)
+    .separator
 
   .container
     .row
       .span12
-        h2 = t('views.product.popular')
-    .row
-      - @popular_products.each do |product|
-        .span3
-          .popular-item
-            = link_to(image_tag(product.image_url(:mini).to_s) + content_tag(:span, 'Посмотреть'), product)
-      = link_to t('views.product.list'), products_path
-  .container
-    .row
-      .span12
-        h2 = t('views.product.latest')
+        h2.pull-left = t('views.product.latest')
+        = link_to t('views.product.list'), products_path, class: "pull-right headright"
+        .clearfix
     .row
       - @last_products.each do |product|
         .span3
           .popular-item
             = link_to(image_tag(product.image_url(:mini).to_s) + content_tag(:span, 'Посмотреть'), product)
-      = link_to t('views.product.list'), products_path
 
-  .posts
-     = render @posts
+  .separator
+
+
+  .container
+    .row
+      .span12
+        h2.center Новости
+  .news
+    .container
+      .row
+        .news-blocks
+          .span4
+            .news-content
+              p blablabla
+          .span4
+            .news-content
+              p blablabla
+          .span4
+            .news-content
+              p blablabla
+
+  .contacts
+    .container
+      .row
+        .span12
+          .pull-left
+            a.phone href="tel:+7 (911) 123-34-45"
+              span.phone-code +7 (911)&nbsp;
+              | 123-34-45
+          .pull-right
+            address
+              h4 Наши координаты:
+              p.country Россия
+              p.city Санкт-Петербург
+              p.street ул.Бассейная 7
+
+              p.contact-us
+                |Пишите нам на&nbsp;
+                a href="mailto:email@example.com" email@example.com
+          .clearfix
+
+  .container
+    .row
+      .posts
+         = render @posts
+

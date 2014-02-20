@@ -6,19 +6,41 @@
 }
 
 .item {
+  overflow: hidden;
+  height: 100%;
   img {
-    display: inline-block;
-    width: 500px;
-    height: 434px;
+    float: left;
+    width: 50%;
+    //height: 434px;
   }
   > div {
-    display: inline-block;
+    float: left;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    .item-description-top {
+      height: 81%;
+      color: #FFF;
+      h1 {
+        color: #FFF;
+      }
+    }
+    .item-buttons {
+      height: 19%;
+      a {
+        margin-right: 7px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
   }
 }
 //Пейджинатор
 .slidesjs-pagination {
   list-style: none;
   text-align: center;
+  margin-top: 30px;
   li {
     display: inline-block;
     a {

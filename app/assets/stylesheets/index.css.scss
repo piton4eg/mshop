@@ -1,0 +1,143 @@
+.slider-container {
+  position: relative;
+}
+.slider-bg {
+  position: absolute;
+  width: 100%;
+  height: 420px;
+  background-color: #D86B06;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    color-stop(0.57, #CE5505),
+    color-stop(0.71, #D86B06),
+    color-stop(1, #F5CE0D)
+  );
+  background-image: -o-linear-gradient(right bottom, #CE5505 57%, #D86B06 71%, #F5CE0D 100%);
+  background-image: -moz-linear-gradient(right bottom, #CE5505 57%, #D86B06 71%, #F5CE0D 100%);
+  background-image: -webkit-linear-gradient(right bottom, #CE5505 57%, #D86B06 71%, #F5CE0D 100%);
+  background-image: -ms-linear-gradient(right bottom, #CE5505 57%, #D86B06 71%, #F5CE0D 100%);
+  background-image: linear-gradient(to right bottom, #CE5505 57%, #D86B06 71%, #F5CE0D 100%);
+}
+
+
+.popular-item {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+  overflow: hidden;
+  background-color: #DDD;
+  margin-bottom: 30px;
+
+  img {
+    opacity: 1;
+    width: 200px;
+    height: 200px;
+  }
+  span {
+    opacity: 0;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    z-index: 4;
+    color: transparent;
+    display: block;
+    width: 150px;
+    height: 150px;
+    font-size: 24px;
+    line-height: 150px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #11808A;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    transition: all 0.4s ease-in 0s;
+  }
+  &:hover {
+    img {
+      opacity: 0;
+    }
+    span {
+      opacity: 1;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 200px;
+      line-height: 200px;
+      color: #fff;
+    }
+  }
+}
+
+
+// Блок с новостями внизу
+.news {
+  background: image-url('/assets/background/news.jpg') no-repeat 0 0;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 300px;
+
+  .container,
+  .row {
+    height: 100%;
+  }
+
+  .news-blocks {
+    width: 100%;
+    height: 100%;
+    > div {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      height: 100%;
+      .news-content {
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        margin: auto 0;
+        padding: 20px;
+      }
+    }
+  }
+}
+
+//Блок с контактами внизу
+.contacts {
+  min-height: 70px;
+  background-color: #11808A;
+  //background-image: linear-gradient(to bottom, #11949E, #0F6C75);
+  //background-repeat: repeat-x;
+  a,
+  a:hover,
+  a:active,
+  a:focus {
+    color: #FFF;
+    font-size: 31px;
+    line-height: 134px;
+    text-decoration: none;
+    cursor: default;
+    span {
+      color: #ABABAB;
+    }
+  }
+  address {
+    margin-bottom: 13px;
+    a,
+    a:hover,
+    a:active,
+    a:focus {
+      cursor: pointer;
+      color: #333;
+      font-size: 14px;
+      line-height: 1.25;
+    }
+    p {
+      margin-bottom: 1px;
+    }
+  }
+}

@@ -20,7 +20,7 @@ ru:
     back_button: 'Назад'
     add_button: 'Добавить в корзину'
     product:
-      list: 'Продукты'
+      list: 'Все продукты'
       new_button: 'Добавить'
       new_label: 'Добавление продукта'
       show_button: 'Подробнее'
