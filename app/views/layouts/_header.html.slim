@@ -6,8 +6,3 @@ header class="navbar navbar-fixed-top navbar-inverse"
         ul class="nav pull-right nav-pills"
           li = link_to t('views.about_label'), about_path
           li = link_to t('views.contact_label'), contact_path
-          - if @cart
-            li
-              = link_to t('title.cart'), "#"
-            = hidden_div_if(@cart.line_items.empty?, id: 'cart') do
-              = render @cart

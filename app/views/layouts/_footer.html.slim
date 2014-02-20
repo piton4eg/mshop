@@ -1,7 +1,13 @@
 footer
-  .left-text
-    a href="mailto:admin@mail.ru" = t('views.send_error')
-  nav
-    ul
-      li = link_to t('views.about_label'), about_path
-      li = t('views.app_phone')
+  .container
+    .row
+      .span12
+        .totop
+          p Наверх
+        .pull-left
+          a href="mailto:admin@mail.ru" = t('views.send_error')
+        nav
+          ul
+            li = link_to t('views.about_label'), about_path
+            li = t('views.app_phone')
+        .clearfix

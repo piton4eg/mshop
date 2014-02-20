@@ -9,30 +9,33 @@ html
   body
     = render 'layouts/header'
 
+
+    #cartjs.cart
+      - if @cart
+        strong = t('title.cart')
+        = hidden_div_if(@cart.line_items.empty?, id: 'cart') do
+          = render @cart
+        end
+
+      - if logged_in?
+        ul
+          li = link_to t('views.order.list'), orders_path
+          li = link_to t('views.cart.list'), carts_path
+          li = link_to t('views.product.list'), products_path
+          li = link_to t('views.user.list'), users_path
+          li = link_to t('views.post.list'), posts_path
+        = button_to t('title.logout'), logout_path, method: :delete
+
     = yield(:additional_html)
 
 
     .container
       .row
-        .span9
+        .span12
           - flash.each do |key, value|
             = content_tag(:div, value, class: "alert alert-#{key}")
           #store
             = yield
-        .span3
-          - if @cart
-            strong = t('title.cart')
-            = hidden_div_if(@cart.line_items.empty?, id: 'cart') do
-              = render @cart
-            end
 
-          - if logged_in?
-            ul
-              li = link_to t('views.order.list'), orders_path
-              li = link_to t('views.cart.list'), carts_path
-              li = link_to t('views.product.list'), products_path
-              li = link_to t('views.user.list'), users_path
-              li = link_to t('views.post.list'), posts_path
-            = button_to t('title.logout'), logout_path, method: :delete
 
-      = render 'layouts/footer'
+    = render 'layouts/footer'
