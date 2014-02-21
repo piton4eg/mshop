@@ -31,13 +31,13 @@
   height: 200px;
   border-radius: 200px;
   overflow: hidden;
-  background-color: #DDD;
   margin-bottom: 30px;
 
   img {
     opacity: 1;
     width: 200px;
     height: 200px;
+    transition: all 0.4s ease-in 0s;
   }
   span {
     opacity: 0;
@@ -47,11 +47,11 @@
     z-index: 4;
     color: transparent;
     display: block;
-    width: 150px;
+    padding-left: 10px;
+    width: 140px;
     height: 150px;
     font-size: 24px;
     line-height: 150px;
-    text-align: center;
     text-decoration: none;
     background-color: #11808A;
     -webkit-border-radius: 100%;
@@ -68,7 +68,8 @@
       opacity: 1;
       top: 0;
       left: 0;
-      width: 200px;
+      padding-left: 35px;
+      width: 165px;
       height: 200px;
       line-height: 200px;
       color: #fff;
