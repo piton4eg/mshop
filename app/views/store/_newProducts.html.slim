@@ -1,0 +1,68 @@
+.container
+  .row
+    .span12
+      h2.pull-left = t('views.product.latest')
+      = link_to t('views.product.list'), products_path, class: "pull-right headright"
+      .clearfix
+  .row
+    - @last_products.each do |product|
+      .span3
+        .popular-item
+          = link_to(image_tag(product.image_url(:mini).to_s) + content_tag(:span, 'Посмотреть'), product)
+
+
+.scroller
+  #img_list
+    div
+      = link_to products_path
+        img alt="Зелёная краска" src="/assets/scroller/car32.jpg" title=""
+        span
+    div
+      = link_to products_path
+        img alt="Краска «Звезда»" src="/assets/scroller/car33.jpg" title=""
+        span
+    div
+      = link_to products_path
+        img alt="Золотая краска" src="/assets/scroller/car34.jpg" title=""
+        span
+    div
+      = link_to products_path
+        img alt="Красная краска" src="/assets/scroller/car35.jpg" title=""
+        span
+    div
+      = link_to products_path
+        img alt="Жёлтая краска" src="/assets/scroller/car36.jpg" title=""
+        span
+    div
+      = link_to products_path
+        img alt="Красная краска" src="/assets/scroller/car37.jpg" title=""
+        span
+    div
+      = link_to products_path
+        img alt="Оранжевый металлик" src="/assets/scroller/car38.jpg" title=""
+        span
+    div
+      = link_to products_path
+        img alt="Оранжевая краска" src="/assets/scroller/car39.jpg" title=""
+        span
+    div
+      = link_to products_path
+        img alt="Зелёный металлик" src="/assets/scroller/car40.jpg" title=""
+        span
+    div
+      = link_to products_path
+        img alt="Краска Радуга" src="/assets/scroller/car41.jpg" title=""
+        span
+    div
+      = link_to products_path
+        img alt="Хамелион 1»" src="/assets/scroller/car42.jpg" title=""
+        span
+    div
+      = link_to products_path
+        img alt="Хамелион 2" src="/assets/scroller/car43.jpg" title=""
+        span
+    div
+      = link_to products_path
+        img alt="Синий металлик" src="/assets/scroller/car44.jpg" title=""
+        span
+.clearfix

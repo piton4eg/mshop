@@ -14,7 +14,7 @@
         h2.pull-left = t('views.product.popular')
         = link_to "Все продукты", products_path, class: "pull-right headright"
         .clearfix
-    .row
+    .row.popular-item-list
       .span3
         .popular-item
           a href="#"
@@ -52,20 +52,8 @@
               = link_to(image_tag(product.image_url(:mini).to_s) + content_tag(:span, 'Посмотреть'), product)
     .separator
 
-  .container
-    .row
-      .span12
-        h2.pull-left = t('views.product.latest')
-        = link_to t('views.product.list'), products_path, class: "pull-right headright"
-        .clearfix
-    .row
-      - @last_products.each do |product|
-        .span3
-          .popular-item
-            = link_to(image_tag(product.image_url(:mini).to_s) + content_tag(:span, 'Посмотреть'), product)
 
-  .separator
-
+  = render partial: '/store/newProducts'
 
   .container
     .row
@@ -109,4 +97,3 @@
     .row
       .posts
          = render @latest_posts
-

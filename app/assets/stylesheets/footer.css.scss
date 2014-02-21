@@ -26,25 +26,32 @@ footer {
     top: 0;
     background-color: #8A8A8A;
     color: #FFF;
-    padding: 10px 20px;
+    padding: 10px 25px;
     cursor: pointer;
+    transition: background-color 0.3s ease 0s;
     p {
       margin: 0;
     }
     &:after {
+      display: block;
+      width: 0;
+      content: "";
+      position: absolute;
+      top: -14px;
+      left: auto;
+      right: 50%;
+      bottom: auto;
       border-color: #8A8A8A transparent;
       border-style: solid;
       border-width: 0 15px 15px;
-      bottom: auto;
-      content: "";
-      display: block;
-      left: auto;
       margin-right: -15px;
-      position: absolute;
-      right: 50%;
-      top: -14px;
       transition: border-color 0.3s ease 0s;
-      width: 0;
+    }
+    &:hover {
+      background-color: #DD7B07;
+      &:after {
+        border-color: #DD7B07 transparent;
+      }
     }
   }
 }

@@ -29,13 +29,14 @@ html
     = yield(:additional_html)
 
 
-    .container
-      .row
-        .span12
-          - flash.each do |key, value|
-            = content_tag(:div, value, class: "alert alert-#{key}")
-          #store
-            = yield
+    -if yield.present?
+      .container
+        .row
+          .span12
+            - flash.each do |key, value|
+              = content_tag(:div, value, class: "alert alert-#{key}")
+            #store
+              = yield
 
 
     = render 'layouts/footer'
