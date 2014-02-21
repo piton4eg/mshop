@@ -13,6 +13,9 @@ ru:
     are_you_sure: 'Вы уверены?'
   views:
     app_name: 'Интернет-каталог'
+    phone_code: '+7 (911)&nbsp;'
+    phone_number: '123-34-45'
+    all_phone: '+7 (911) 123-34-45'
     app_phone: 'Телефон: 111-111'
     about_label: 'О каталоге'
     contact_label: 'Контакты'

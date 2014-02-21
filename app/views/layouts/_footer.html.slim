@@ -9,5 +9,13 @@ footer
         nav
           ul
             li = link_to t('views.about_label'), about_path
-            li = t('views.app_phone')
+            li
+              a.phone href="tel:+7 (911) 123-34-45"
+                = t('views.all_phone')
+        .clearfix
+
+    .row
+      .span12
+        p.pull-left 2014 © ООО «КраскиДляАвтомобилей»
+        p.pull-right Сайт создан студией Рога и Копыта
         .clearfix

@@ -79,8 +79,8 @@
         .span12
           .pull-left
             a.phone href="tel:+7 (911) 123-34-45"
-              span.phone-code +7 (911)&nbsp;
-              | 123-34-45
+              span.phone-code = t('views.phone_code').html_safe
+              = t('views.phone_number')
           .pull-right
             address
               h4 Наши координаты:
