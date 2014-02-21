@@ -1,10 +1,11 @@
 var go_down = $('body');
+var winHeight = $(window).height();
 $(function() {
-	$("#topjs").hide().removeAttr("href");
-	if ($(window).scrollTop() >= "250") $("#topjs").fadeIn("slow")
+	$("#topjs").hide();
+	if ($(window).scrollTop() >= winHeight) $("#topjs").fadeIn("slow")
 	var scrollDiv = $("#topjs");
 	$(window).scroll(function() {
-		if ($(window).scrollTop() <= "250") $(scrollDiv).fadeOut("slow")
+		if ($(window).scrollTop() <= winHeight) $(scrollDiv).fadeOut("slow")
 		else $(scrollDiv).fadeIn("slow")
 	});
 	$(window).scroll(function() {
