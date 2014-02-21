@@ -12,10 +12,9 @@ html
 
     #cartjs.cart
       - if @cart
-        strong = t('title.cart')
+        img src="/assets/background/cart_icon.png" alt="Cart"
         = hidden_div_if(@cart.line_items.empty?, id: 'cart') do
           = render @cart
-        end
 
       - if logged_in?
         ul
