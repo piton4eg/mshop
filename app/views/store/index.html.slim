@@ -58,20 +58,12 @@
   .container
     .row
       .span12
-        h2.center Новости
+        h2.pull-left Новости
   .news
     .container
       .row
         .news-blocks
-          .span4
-            .news-content
-              p blablabla
-          .span4
-            .news-content
-              p blablabla
-          .span4
-            .news-content
-              p blablabla
+          = render partial: 'posts/show_post', collection: @latest_posts, as: :post
 
   .contacts
     .container
@@ -92,8 +84,3 @@
                 |Пишите нам на&nbsp;
                 a href="mailto:email@example.com" email@example.com
           .clearfix
-
-  .container
-    .row
-      .posts
-         = render @latest_posts

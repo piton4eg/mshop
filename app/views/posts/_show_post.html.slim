@@ -1,0 +1,5 @@
+.span4
+  .news-content
+    b = post.title
+    p = truncate(strip_tags(post.value), length: 80)
+    p = link_to("Подробнее", post, class: "btn")
