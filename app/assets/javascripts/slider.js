@@ -2,7 +2,8 @@ $(document).ready(function(){
 	$(function() {
 		$('#slides').slidesjs({
 			width: 940,
-			height: 445
+			height: 365,
+			pagination: false
 //			play: {
 //				active: true,
 //				auto: true,

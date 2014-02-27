@@ -2,16 +2,21 @@
   display: none;
   position: relative;
   overflow: visible !important;
-  margin-top: 80px;
+  background-color: #FFF;
+  //margin-top: 80px;
 }
 
 .item {
   overflow: hidden;
   height: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 30px 70px;
   img {
     float: left;
+    max-height: 100%;
     width: 50%;
-    //height: 434px;
   }
   > div {
     float: left;
@@ -23,14 +28,20 @@
       color: #333;
       h1 {
         color: #000;
+        margin-bottom: 30px;
       }
     }
     .item-buttons {
       height: 19%;
+      text-align: right;
       a {
         margin-right: 7px;
         &:last-child {
           margin-right: 0;
+        }
+        &.btn-main {
+          padding-left: 15px;
+          padding-right: 15px;
         }
       }
     }
@@ -69,8 +80,8 @@
 a.slidesjs-next,
 a.slidesjs-previous {
   position: absolute;
-  top: 20%;
-  left: -80px;
+  top: 40%;
+  left: 20px;
   z-index: 100;
   background: image-url('/assets/arrows/arrow.png') repeat 0 0;
   -webkit-background-size: 100% 100%;
@@ -90,7 +101,7 @@ a.slidesjs-previous {
 a.slidesjs-next {
   background-image: image-url('/assets/arrows/arrow1.png');
   left: auto;
-  right: -80px;
+  right: 20px;
 }
 a.slidesjs-play,
 a.slidesjs-stop {

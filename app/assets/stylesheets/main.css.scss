@@ -33,29 +33,41 @@ a {
 }
 
 .btn-doit {
-  background: #11808A;
-  border-color: #11808A;
+  background: #FF7200;
+  border-color: #FF7200;
   color: #FFF;
+  padding: 6px 30px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
   box-shadow: none;
   text-shadow: none;
   &:hover,
   &:active,
   &:focus {
     color: #FFF;
-    background: #0F6C75;
-    border-color: #0F6C75;
+    background: #DD5B00;
+    border-color: #DD5B00;
   }
 }
 .btn-main {
-  background: #CECECE;
-  border-color: #CECECE;
+  background: #6B6B6B;
+  border-color: #6B6B6B;
+  color: #FFF;
+  padding: 6px 30px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
   box-shadow: none;
   text-shadow: none;
   &:hover,
   &:active,
   &:focus {
-    background: #A7A7A7;
-    border-color: #A7A7A7;
+    color: #FFF;
+    background: #454545;
+    border-color: #454545;
   }
 }
 

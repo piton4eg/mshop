@@ -1,59 +1,18 @@
 = content_for :additional_html do
 
   .slider-container
-    .slider-bg
+    /.slider-bg
     .container
       .row
         .span12
           = render partial: '/store/slider'
 
-  .separator
-  .container
-    .row
-      .span12
-        h2.pull-left = t('views.product.popular')
-        = link_to "Все продукты", products_path, class: "pull-right headright"
-        .clearfix
-    .row.popular-item-list
-      .span3
-        .popular-item
-          a href="#"
-            img src="/assets/slider/car2.png" alt =""
-            span Посмотреть
-      .span3
-        .popular-item
-          a href="#"
-            img src="/assets/slider/car1.png" alt =""
-            span Посмотреть
-      .span3
-        .popular-item
-          a href="#"
-            img src="/assets/slider/color2.png" alt =""
-            span Посмотреть
-      .span3
-        .popular-item
-          a href="#"
-            img src="/assets/slider/car5.jpg" alt =""
-            span Посмотреть
+  / Блок с популярными продуктами
+  = render partial: '/store/popularProducts'
 
-  .separator
-
-  - if @popular_products.present?
-    .container
-      .row
-        .span12
-          h2.pull-left = t('views.product.popular')
-          = link_to t('views.product.list'), products_path, class: "pull-right headright"
-          .clearfix
-      .row
-        - @popular_products.each do |product|
-          .span3
-            .popular-item
-              = link_to(image_tag(product.image_url(:mini).to_s) + content_tag(:span, 'Посмотреть'), product)
-    .separator
-
-
+  / Блок с новинками
   = render partial: '/store/newProducts'
+
 
   .container
     .row
