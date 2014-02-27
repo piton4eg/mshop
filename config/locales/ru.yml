@@ -12,7 +12,7 @@ ru:
   confirm:
     are_you_sure: 'Вы уверены?'
   views:
-    app_name: 'Интернет-каталог'
+    app_name: 'Интернет-магазин'
     phone_code: '+7 (911)&nbsp;'
     phone_number: '123-34-45'
     all_phone: '+7 (911) 123-34-45'
