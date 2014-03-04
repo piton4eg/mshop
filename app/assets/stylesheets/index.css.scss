@@ -90,6 +90,13 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
   }
+  &:hover {
+    .popular-item {
+      img {
+        opacity: 0.3;
+      }
+    }
+  }
 }
 
 .popular-item-description {
