@@ -6,19 +6,34 @@
       .clearfix
   .row.popular-item-list
     .span12
-      .popular-item
-        a href="#"
-          img src="/assets/slider/car2.png" alt =""
-          span Лучший выбор
+      .popular-item-outer
+        .popular-item
+          a href="#"
+            img src="/assets/slider/car2.png" alt =""
+            span Лучший выбор
+        .arrow
       .popular-item-description
         a href="#" Описание товара
+      .popular-item-buy.hidden
+        .popular-item-buy-inner
+          p.price Цена товара 566 $
+          a class="btn btn-doit" href="#" Купить
+          a class="btn btn-main" href="#" Подробнее
+
     .span12
-      .popular-item
-        a href="#"
-          img src="/assets/slider/car1.png" alt =""
-          span Лучший выбор
+      .popular-item-outer
+        .popular-item
+          a href="#"
+            img src="/assets/slider/car1.png" alt =""
+            span Лучший выбор
+        .arrow
       .popular-item-description
         a href="#" Описание товара
+      .popular-item-buy.hidden
+        .popular-item-buy-inner
+          p.price Цена товара 566 $
+          a class="btn btn-doit" href="#" Купить
+          a class="btn btn-main" href="#" Подробнее
 
 
 - if @popular_products.present?
@@ -31,11 +46,18 @@
     .row.popular-item-list
       - @popular_products.each do |product|
         .span12
-          .popular-item
-            = link_to(image_tag(product.image_url(:mini).to_s) + content_tag(:span, 'Лучший выбор'), product)
+          .popular-item-outer
+            .popular-item
+              = link_to(image_tag(product.image_url(:mini).to_s) + content_tag(:span, 'Лучший выбор'), product)
+              .arrow
           .popular-item-description
             a href="#" Описание товара
 
+          .popular-item-buy.hidden
+            .popular-item-buy-inner
+              p.price Цена товара 566 $
+              a class="btn btn-doit" href="#" Купить
+              a class="btn btn-main" href="#" Подробнее
 
 
 

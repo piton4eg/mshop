@@ -18,9 +18,11 @@ h2 {
 }
 
 a {
-  color: #11808A;
-  &:hover {
-    color: #0F6C75;
+  color: #000;
+  &:hover,
+  &:active,
+  &:focus {
+    color: #DD5B00;
     text-decoration: none;
   }
 }
