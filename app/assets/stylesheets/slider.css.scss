@@ -35,6 +35,8 @@
       height: 19%;
       text-align: right;
       a {
+        font-size: 20px;
+
         margin-right: 7px;
         &:last-child {
           margin-right: 0;
@@ -83,7 +85,7 @@ a.slidesjs-previous {
   top: 40%;
   left: 20px;
   z-index: 100;
-  background: image-url('/assets/arrows/arrow.png') repeat 0 0;
+  background: image-url('/assets/arrows/left1.png') no-repeat 0 0 #6B6B6B;
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
   -o-background-size: 100% 100%;
@@ -99,7 +101,7 @@ a.slidesjs-previous {
   }
 }
 a.slidesjs-next {
-  background-image: image-url('/assets/arrows/arrow1.png');
+  background-image: image-url('/assets/arrows/right1.png');
   left: auto;
   right: 20px;
 }

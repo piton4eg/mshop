@@ -117,14 +117,14 @@
         prevButton = $("<a>", {
           "class": "slidesjs-previous slidesjs-navigation",
           href: "#",
-          title: "Previous",
-          text: "Previous"
+          title: "Назад",
+          text: "Назад"
         }).appendTo($element);
         nextButton = $("<a>", {
           "class": "slidesjs-next slidesjs-navigation",
           href: "#",
-          title: "Next",
-          text: "Next"
+          title: "Вперед",
+          text: "Вперед"
         }).appendTo($element);
       }
       $(".slidesjs-next", $element).click(function(e) {
