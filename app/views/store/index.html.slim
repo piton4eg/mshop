@@ -7,10 +7,10 @@
           = render partial: '/store/slider'
 
   / Блок с популярными продуктами
-  = render partial: '/store/popularProducts'
+  = render partial: '/store/popular_products'
 
   / Блок с новинками
-  = render partial: '/store/newProducts'
+  = render partial: '/store/new_products'
 
 
   .container
@@ -23,7 +23,7 @@
         .news-blocks
           = render partial: 'posts/show_post', collection: @latest_posts, as: :post
 
-  .contacts
+  /.contacts
     .container
       .row
         .span12

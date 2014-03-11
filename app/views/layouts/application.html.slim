@@ -9,7 +9,6 @@ html
   body
     = render 'layouts/header'
 
-
     #cartjs.cart
       - if @cart
         img src="/assets/background/cart_icon.png" alt="Cart"
@@ -25,8 +24,8 @@ html
           li = link_to t('views.post.list'), posts_path
         = button_to t('title.logout'), logout_path, method: :delete
 
+    / Content for main page
     = yield(:additional_html)
-
 
     - if yield.present?
       .container
@@ -36,6 +35,5 @@ html
               = content_tag(:div, value, class: "alert alert-#{key}")
             #store
               = yield
-
 
     = render 'layouts/footer'

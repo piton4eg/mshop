@@ -22,6 +22,10 @@ module ApplicationHelper
      content_tag("tr", attributes, &block)
   end
 
+  def current_link_to(label, path, options={})
+    content_tag('li', link_to(label, path, options), class: (current_page?(path) ? "selected" : nil))
+  end
+
   def logged_in?
     session[:user_id].present?
   end

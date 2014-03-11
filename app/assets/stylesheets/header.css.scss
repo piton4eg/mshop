@@ -16,23 +16,12 @@ header {
       background-color: #6B6B6B;
       min-height: 40px;
       transition: background-color 0.3s ease 0s;
-      &:after {
-        display: block;
-        opacity: 0;
-        position: absolute;
-        bottom: -15px;
-        right: 41%;
-        content: "";
-        width: 0px;
-        height: 0px;
-        border-style: solid;
-        border-width: 15px 9px 0 9px;
-        border-color: #6B6B6B transparent transparent transparent;
-        transition: border-color 0.3s ease 0s;
-      }
 
       &:first-child {
         border-left: 1px solid #484949;
+      }
+      &.selected {
+        background-color: #ABABAB;
       }
       &:hover {
         background-color: #FF7200;

@@ -4,5 +4,5 @@ header.navbar.navbar-fixed-top.navbar-inverse
       a.brand#logo href=root_path = t('views.app_name')
       nav
         ul class="nav pull-right nav-pills"
-          li = link_to t('views.about_label'), about_path
-          li = link_to t('views.contact_label'), contact_path
+          li = current_link_to t('views.about_label'), about_path
+          li = current_link_to t('views.contact_label'), contact_path
