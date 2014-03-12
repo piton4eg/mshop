@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe 'Static pages' do
+  let(:base_title) { 'Интернет-магазин' }
+
   describe 'Root page' do
     it 'should have main title' do
       visit '/'
@@ -16,7 +18,7 @@ describe 'Static pages' do
 
     it 'should have about title' do
       visit '/about'
-      expect(page).to have_title('Интернет-магазин | О каталоге')
+      expect(page).to have_title("#{base_title} | О каталоге")
     end
   end
 
@@ -28,7 +30,7 @@ describe 'Static pages' do
 
     it 'should have contact title' do
       visit '/contact'
-      expect(page).to have_title('Интернет-магазин | Контакты')
+      expect(page).to have_title("#{base_title} | Контакты")
     end
   end
 end
